@@ -1,0 +1,63 @@
+@import "./common/common"
+@import "./common/util"
+@import "./detail/detail"
+
+.refresh-btn{
+    border: 0 none
+    outline: 0 none
+    cursor: pointer
+    position: absolute
+    right: px2rem(12)
+    top: px2rem(4)
+    width: px2rem(32)
+    height:px2rem(32)
+}
+
+.event {
+    padding: px2rem(8) px2rem(10)
+    border-bottom: px2rem(1) solid #DDD
+    & > a{
+        text-decoration: none
+        &>p {
+            margin: 0;
+            line-height: px2rem(25)
+            font-dpr(14)
+            color:#888
+            &>b {
+                color: #4100FF
+                font-weight: 400
+            }
+        }
+        .event-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: px2rem(10)
+            &>img {
+                width: px2rem(50)
+                border-radius: px2rem(4)
+            }
+            &>span {
+                flex: 1;
+                padding: 0 px2rem(8)
+                &>p {
+                    margin: 0;
+                    line-height: px2rem(24)
+                    color: #4100FF
+                    font-dpr(14)
+                    &:last-child {
+                        font-dpr(12)
+                        color: #888
+                    }
+                }
+            }
+            &>i{
+                color:#AAA
+                font-weight:400
+            }
+        }
+    }
+    &:last-child {
+        border: 0 none
+    }
+}
