@@ -41,10 +41,10 @@ server/
     |-- lib/        #server libraries,util and helper modules inside
     |-- router.js   #server router,all the routes is defined here
     |-- bootstrap.js #initialize application,load middlewares and setup
-view/
-    |-- layout.html #global layout template
-    |-- index.html  #index page's template
-    |-- *.html      #more your own page's template
+    |-- view/
+        |-- layout.html #global layout template
+        |-- index.html  #index page's template
+        |-- *.html      #more your own page's template
 app.js      #web application enrty file
 ```
 

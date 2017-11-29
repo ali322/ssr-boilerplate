@@ -41,10 +41,10 @@ server/
     |-- lib/        #后端库(工具库等等)
     |-- router.js   #后端路由定义文件
     |-- bootstrap.js #初始化后端应用,加载中间件和设置应用
-view/
-    |-- layout.html #全部布局文件
-    |-- index.html  #index页面模板
-    |-- *.html      #更多的页面模板
+    |-- view/
+        |-- layout.html #全部布局文件
+        |-- index.html  #index页面模板
+        |-- *.html      #更多的页面模板
 app.js      #应用入口文件
 ```
 
