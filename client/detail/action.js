@@ -1,18 +1,26 @@
 import axios from 'axios'
 import * as constants from './constant'
 
-export function requestDetail ({ commit }) {
-  commit(constants.REQUEST_DETAIL)
+function requestDetail (param) {
+  return {
+    type: constants.REQUEST_DETAIL,
+    param
+  }
 }
 
-export function responseDetail ({ commit }, payload) {
-  commit(constants.RESPONSE_DETAIL, payload)
+function responseDetail (payload) {
+  return {
+    type: constants.RESPONSE_DETAIL,
+    payload
+  }
 }
 
-export function fetchDetail ({ dispatch, commit }, id) {
-  dispatch('requestDetail')
-  return axios.get(`/mock/event/${id}`).then(ret => {
-    ret = ret.data
-    dispatch('responseDetail', ret.data)
-  })
+export function fetchDetail (param) {
+  return dispatch => {
+    dispatch(requestDetail(param))
+    return axios.get(`/mock/event/${param.id}`).then(ret => {
+      ret = ret.data
+      dispatch(responseDetail(ret.data))
+    })
+  }
 }

@@ -1,6 +1,6 @@
 module.exports = {
   type: 'isomorphic',
-  autocheck: ['vue', 'vuex', 'vue-router'],
+  autocheck: ['react', 'redux', 'react-dom'],
   jsExt: '.js',
   cssExt: '.styl'
 }

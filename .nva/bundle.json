@@ -1,11 +1,11 @@
 {
   "index": {
     "input": {
-      "js": "client/index.js",
+      "js": "client/index.jsx",
       "css": "client/index.styl",
       "html": "server/view/index.html"
     },
-    "serverBundle": "client/index-server.js",
+    "serverBundle": "client/index-server.jsx",
     "vendor": {
       "js": "base",
       "css": "base"

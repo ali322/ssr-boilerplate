@@ -1,13 +1,18 @@
 let { markupOfRoute } = require('../lib')
+let bundle = require('../../dist/server/bundle/index').default
 
-exports.index = async function (ctx) {
-  let html = ''
+exports.index = async function (ctx, next) {
+  let markup = ''
+  let initialState = { flag: 9527 }
   try {
-    html = await markupOfRoute('index', ctx)
+    markup = await markupOfRoute('index', initialState, ctx)
   } catch (err) {
     throw err
   }
-  ctx.body = html
+  await ctx.render('index', {
+    markup,
+    initialState: JSON.stringify(ctx.hydrateState)
+  })
 }
 
 exports.error = async function (ctx, next) {

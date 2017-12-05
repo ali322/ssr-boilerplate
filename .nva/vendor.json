@@ -1,7 +1,7 @@
 {
   "js":{
       "base":[
-          "vue","vuex","vue-router"
+          "react","react-dom","redux"
       ]
   },
   "css":{

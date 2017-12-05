@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- start:css -->
-  <link rel="stylesheet" href="/vendor/base-73aa00f3.css"/>
+  <link rel="stylesheet" href="/vendor/base-563495ac.css"/>
   <!-- end:css -->
   <title>SSR Boilerplate</title>
 </head>
 <body>
-  <div id="app">
-  <!--vue-ssr-outlet-->
-  </div>
+  <div id="app">{{{markup}}}</div>
+  <script type="application/json" id="initial-state">{{{initialState}}}</script>
   <!-- start:js -->
-  <script src="/vendor/base-139a92ff.js"></script>
+  <script src="/vendor/base-bdcb4e70.js"></script>
   <script src="http://10.13.13.22:7000/hmr/index.js"></script>
   <!-- end:js -->
   <!-- start:browser-sync -->

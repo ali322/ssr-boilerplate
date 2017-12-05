@@ -4,7 +4,7 @@ ssr(server side render) project boilerplate [中文文档](./README_zh.md)
 
 Develop
 ===
-1. clone to your local disk `git clone https://github.com/ali322/isomorphic-boilerplate`
+1. clone to your local disk `git clone https://github.com/ali322/ssr-boilerplate`
 2. run `npm install`
 3. run `npm install nva -g`
 4. run `nva vendor` to build vendor libraries

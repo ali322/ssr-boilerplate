@@ -1,6 +1,13 @@
 {
+  "root": true,
   "extends": "standard",
   "env": {
     "node": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "no-unused-vars":"off"
   }
 }
