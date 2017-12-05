@@ -1,5 +1,7 @@
 # SSR Boilerplate
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/ba09b7efe52888308abc/maintainability)](https://codeclimate.com/github/ali322/ssr-boilerplate/maintainability)
+
 ssr(server side render) project boilerplate [中文文档](./README_zh.md)
 
 Develop
@@ -7,7 +9,6 @@ Develop
 1. clone to your local disk `git clone https://github.com/ali322/ssr-boilerplate`
 2. run `npm install`
 3. run `npm install nva -g`
-4. run `nva vendor` to build vendor libraries
 5. run `nva dev` to start develop server
 6. run `npm run lint` to lint source code
 7. run `npm test` to run tests

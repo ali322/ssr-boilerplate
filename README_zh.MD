@@ -1,5 +1,7 @@
 # SSR Boilerplate
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/ba09b7efe52888308abc/maintainability)](https://codeclimate.com/github/ali322/ssr-boilerplate/maintainability)
+
 服务端渲染项目模板 [English Document](./README.md)
 
 开发
@@ -7,7 +9,6 @@
 1. 克隆至本地 `git clone https://github.com/ali322/isomorphic-boilerplate`
 2. 运行 `npm install`
 3. 运行 `npm install nva -g`
-4. 运行 `nva vendor` 打包第三方库
 5. 运行 `nva dev` 启动开发服务器
 6. 运行 `npm run lint` 检查代码
 7. 运行 `npm test` 执行测试用例
