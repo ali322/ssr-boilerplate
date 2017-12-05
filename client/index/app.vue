@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <div class="header">Github Events <button class="refresh-btn refresh-icon" @click="handleRefresh"></button></div>
+    <div class="header">Github Events1 <button class="refresh-btn refresh-icon" @click="handleRefresh"></button></div>
     <div class="content">
         <div class="event" v-for="event in events" :key="event.id">
             <router-link :to="{path:'/detail/'+event.id}">
@@ -37,6 +37,9 @@ export default {
   },
   computed: {
     ...mapState({
+      flag: state => {
+        console.log('index', state.index)
+      },
       events: state => state.index.events,
       route: "route"
     })

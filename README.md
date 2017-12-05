@@ -7,7 +7,6 @@ Develop
 1. clone to your local disk `git clone https://github.com/ali322/isomorphic-boilerplate`
 2. run `npm install`
 3. run `npm install nva -g`
-4. run `nva vendor` to build vendor libraries
 5. run `nva dev` to start develop server
 6. run `npm run lint` to lint source code
 7. run `npm test` to run tests

@@ -1,4 +1,5 @@
 import { createApp } from './app'
+import { merge } from 'lodash'
 
 export default ctx => {
   return new Promise((resolve, reject) => {
@@ -20,7 +21,7 @@ export default ctx => {
         })
       )
         .then(() => {
-          ctx.state = store.state
+          ctx.state = merge({}, ctx.state, store.state)
           resolve(app)
         })
         .catch(reject)

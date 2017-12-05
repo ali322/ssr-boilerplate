@@ -1,13 +1,14 @@
 let { markupOfRoute } = require('../lib')
 
 exports.index = async function (ctx) {
-  let html = ''
+  let markup = ''
+  let initialState = { flag: 9527 }
   try {
-    html = await markupOfRoute('index', ctx)
+    markup = await markupOfRoute('index', initialState, ctx)
   } catch (err) {
     throw err
   }
-  ctx.body = html
+  ctx.body = markup
 }
 
 exports.error = async function (ctx, next) {

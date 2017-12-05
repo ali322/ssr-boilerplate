@@ -3,7 +3,7 @@ let { createBundleRenderer } = require('vue-server-renderer')
 let lrcCache = require('lru-cache')
 let { readFileSync } = require('fs')
 
-exports.markupOfRoute = (route, ctx) => {
+exports.markupOfRoute = (route, initialState, ctx) => {
   return new Promise((resolve, reject) => {
     const app = readFileSync(
       path.resolve('dist', 'server', 'bundle', `${route}.js`),
@@ -13,6 +13,7 @@ exports.markupOfRoute = (route, ctx) => {
       path.resolve('server', 'view', `${route}.html`),
       'utf-8'
     )
+    ctx.state = { [route]: initialState }
     const renderer = createBundleRenderer(app, {
       template,
       runInNewContext: 'once',
