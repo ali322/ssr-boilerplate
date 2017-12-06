@@ -13,7 +13,7 @@ exports.markupOfRoute = (route, initialState, ctx) => {
       path.resolve('server', 'view', `${route}.html`),
       'utf-8'
     )
-    ctx.state = { [route]: initialState }
+    ctx.state = initialState
     const renderer = createBundleRenderer(app, {
       template,
       runInNewContext: 'once',

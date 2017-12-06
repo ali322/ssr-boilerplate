@@ -1,9 +1,9 @@
 <template>
 <div class="container">
-    <div class="header">Github Events1 <button class="refresh-btn refresh-icon" @click="handleRefresh"></button></div>
+    <div class="header">Github Events <button class="refresh-btn refresh-icon" @click="handleRefresh"></button></div>
     <div class="content">
         <div class="event" v-for="event in events" :key="event.id">
-            <router-link :to="{path:'/detail/'+event.id}">
+            <a :href="'/detail/'+event.id">
                 <div class="event-title">
                     <img :src="event.avatar" alt="" />
                     <span>
@@ -13,7 +13,7 @@
                     <i class="fa fa-caret-right" />
                 </div>
                 <p>{{event.type}} In <b>{{event.repo}}</b></p>
-            </router-link>
+            </a>
         </div>
     </div>
 </div>
@@ -25,7 +25,7 @@ import indexStore from './store'
 
 export default {
   name: "Index",
-  asyncState({ store, route }) {
+  asyncState({ store }) {
     //   store.registerModule('index', indexStore)
       return store.dispatch('fetchEvents')
   },
@@ -37,11 +37,7 @@ export default {
   },
   computed: {
     ...mapState({
-      flag: state => {
-        console.log('index', state.index)
-      },
-      events: state => state.index.events,
-      route: "route"
+      events: state => state.events
     })
   }
 }

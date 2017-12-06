@@ -1,9 +1,10 @@
 let Router = require('koa-router')
-let { index, notFound } = require('./controller/main')
+let { index, detail, notFound } = require('./controller/main')
 
 const router = new Router()
 
-router.use(index)
+router.get('/', index)
+router.get('/detail/:id', detail)
 router.all('*', notFound)
 
 module.exports = router

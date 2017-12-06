@@ -11,6 +11,17 @@ exports.index = async function (ctx) {
   ctx.body = markup
 }
 
+exports.detail = async function (ctx) {
+  let markup = ''
+  let initialState = { id: ctx.params.id }
+  try {
+    markup = await markupOfRoute('detail', initialState, ctx)
+  } catch (err) {
+    throw err
+  }
+  ctx.body = markup
+}
+
 exports.error = async function (ctx, next) {
   try {
     await next()

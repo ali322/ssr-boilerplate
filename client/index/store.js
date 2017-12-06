@@ -1,10 +1,16 @@
+import Vue from 'vue'
+import Vuex from 'vuex'
 import * as actions from './action'
 import mutations from './mutation'
 
-export default {
-  state: {
-    events: []
-  },
-  actions,
-  mutations
+Vue.use(Vuex)
+
+export function createStore () {
+  return new Vuex.Store({
+    state: {
+      events: []
+    },
+    actions,
+    mutations
+  })
 }

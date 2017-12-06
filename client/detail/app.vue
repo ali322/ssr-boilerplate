@@ -19,14 +19,13 @@
 
     export default {
         name: 'Detail',
-        asyncState({store, route}) {
+        asyncState({store}) {
             // store.registerModule('detail', detailStore)
-            return store.dispatch('fetchDetail', route.params.id)
+            return store.dispatch('fetchDetail', 123)
         },
         computed: {
             ...mapState({
-                detail: state => state.detail.detail,
-                route: 'route'
+                detail: state => state.detail
             })
         },
         methods: {
@@ -36,7 +35,7 @@
             ...mapActions(Object.keys(actions))
         },
         mounted() {
-            this.fetchDetail(this.route.params.id)
+            this.fetchDetail(123)
         }
     }
 </script>
