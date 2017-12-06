@@ -10,13 +10,22 @@
     "lint": "eslint client server"
   },
   "ava": {
-    "files": ["server/test/**/*.js"],
+    "files": [
+      "server/test/**/*.js"
+    ],
     "failFast": true
   },
   "jest": {
-    "setupFiles": ["<rootDir>/client/test/unit/fixture/setup.js"],
-    "testMatch": ["**/client/test/unit/spec/**/*.js"],
-    "moduleFileExtensions": ["js", "json"],
+    "setupFiles": [
+      "<rootDir>/client/test/unit/fixture/setup.js"
+    ],
+    "testMatch": [
+      "**/client/test/unit/spec/**/*.js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
     "moduleNameMapper": {
       "^@/(.+)$": "<rootDir>/client/$1"
     },

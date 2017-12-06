@@ -19,7 +19,11 @@ exports.error = async function (ctx, next) {
   try {
     await next()
   } catch (err) {
-    await ctx.render('error', { msg: err.message })
+    if (err.code === 404) {
+      await ctx.render('404')
+    } else {
+      await ctx.render('error', { msg: err.message })
+    }
   }
 }
 
