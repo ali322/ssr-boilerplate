@@ -21,7 +21,7 @@
         name: 'Detail',
         asyncState({store}) {
             // store.registerModule('detail', detailStore)
-            return store.dispatch('fetchDetail', 123)
+            return store.dispatch('fetchDetail', store.state.id)
         },
         computed: {
             ...mapState({
