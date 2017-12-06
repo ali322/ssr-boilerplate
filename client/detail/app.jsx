@@ -10,7 +10,7 @@ export class Detail extends Component {
   }
   componentDidMount() {
     const { fetchDetail } = this.props.actions
-    fetchDetail({ id: this.props.match.params.id })
+    fetchDetail({ id: this.props.id })
   }
   render() {
     const { detail } = this.props
@@ -38,4 +38,4 @@ export class Detail extends Component {
   }
 }
 
-export default connected(state => state.detail, actions)(Detail)
+export default connected(state => state, actions)(Detail)

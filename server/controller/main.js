@@ -1,5 +1,4 @@
 let { markupOfRoute } = require('../lib')
-let bundle = require('../../dist/server/bundle/index').default
 
 exports.index = async function (ctx, next) {
   let markup = ''
@@ -10,6 +9,20 @@ exports.index = async function (ctx, next) {
     throw err
   }
   await ctx.render('index', {
+    markup,
+    initialState: JSON.stringify(ctx.hydrateState)
+  })
+}
+
+exports.detail = async function (ctx, next) {
+  let markup = ''
+  let initialState = { id: ctx.params.id }
+  try {
+    markup = await markupOfRoute('detail', initialState, ctx)
+  } catch (err) {
+    throw err
+  }
+  await ctx.render('detail', {
     markup,
     initialState: JSON.stringify(ctx.hydrateState)
   })

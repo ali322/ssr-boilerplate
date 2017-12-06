@@ -51,4 +51,4 @@ export class Index extends Component {
   }
 }
 
-export default connected(state => state.index, actions)(Index)
+export default connected(state => state, actions)(Index)
