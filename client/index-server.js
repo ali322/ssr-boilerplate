@@ -4,6 +4,10 @@ import { merge } from 'lodash'
 export default ctx => {
   return new Promise((resolve, reject) => {
     const { app, store, router } = createApp()
+    store.replaceState({
+      ...store.state,
+      ...ctx.state
+    })
     router.push(ctx.url)
     router.onReady(() => {
       const matched = router.getMatchedComponents()
