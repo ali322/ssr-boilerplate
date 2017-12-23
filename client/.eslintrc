@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "extends": "standard",
+  "plugins": ["css-modules", "vue"],
+  "globals": {
+    "__DEV__": true
+  },
+  "env": {
+    "browser": true
+  }
+}
