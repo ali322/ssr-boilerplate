@@ -1,5 +1,8 @@
 {
   "extends": "standard",
+  "plugins":[
+    "vue"
+  ],
   "env": {
     "node": true
   }
