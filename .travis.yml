@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - "8.9.1"
+env:
+- NODE_ENV:test
+before_script: npm i nva -g && nva build
