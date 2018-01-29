@@ -1,4 +1,3 @@
-import 'vue'
 import Vuex from 'vuex'
 import { shallow, createLocalVue } from 'vue-test-utils'
 import moxios from 'moxios'
@@ -37,9 +36,9 @@ describe('actions', () => {
       { type: constants.RESPONSE_EVENTS, payload: ret.data }
     ]
 
-    moxios.stubRequest('/mock/events', {
+    moxios.stubRequest('http://127.0.0.1:3000/mock/events', {
       status: 200,
-      responseText: JSON.stringify(ret),
+      responseText: JSON.stringify(ret)
     })
 
     testAction(actions.fetchEvents, [], {}, actions, expectedMutations, done)
