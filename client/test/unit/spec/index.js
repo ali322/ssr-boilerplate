@@ -30,11 +30,11 @@ describe('actions', () => {
   it('should RESPONSE_EVENTS when fetched', done => {
     let ret = {
       status: 'ok',
-      data: [],
+      data: []
     }
     let expectedMutations = [
       { type: constants.REQUEST_EVENTS },
-      { type: constants.RESPONSE_EVENTS, payload: ret.data },
+      { type: constants.RESPONSE_EVENTS, payload: ret.data }
     ]
 
     moxios.stubRequest('/mock/events', {
@@ -52,11 +52,11 @@ describe('component', () => {
     fetchEvents = jest.fn()
     store = new Vuex.Store({
       state: { index: { events: [] } },
-      actions: { fetchEvents },
+      actions: { fetchEvents }
     })
     wrapper = shallow(app, {
       localVue,
-      store,
+      store
     })
     wrapper.setMethods({ fetchEvents })
   })
