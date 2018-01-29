@@ -1,4 +1,4 @@
-export function testAction(action, args, state, actions, expectedMutations, done) {
+export function testAction (action, args, state, actions, expectedMutations, done) {
   let count = 0
   const commit = (type, payload) => {
     const mutation = expectedMutations[count]

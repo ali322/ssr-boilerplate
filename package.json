@@ -4,10 +4,49 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production node app.js",
+    "test": "npm run test:client && npm run test:server",
+    "test:e2e": "nva-test-e2e -s client/test/e2e/fixture/server.js -c client/test/e2e/fixture/conf.js",
+    "test:client": "jest",
+    "test:server": "BABEL_ENV=test ava --tap | tap-spec",
+    "lint": "eslint client server"
+  },
+  "jest": {
+    "testMatch": [
+      "**/client/test/unit/spec/**/*.js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ],
+    "moduleNameMapper": {
+      "^@/(.+)$": "<rootDir>/client/$1"
+    },
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/client/test/unit/coverage",
+    "mapCoverage": true
+  },
+  "ava": {
+    "files": [
+      "server/test/spec/**/*.js"
+    ],
+    "failFast": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   },
   "author": "",
   "license": "MIT",
+  "repository": "https://github.com/ali322/ssr-boilerplate",
   "dependencies": {
     "axios": "^0.17.1",
     "font-awesome": "^4.7.0",
@@ -30,16 +69,29 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-1": "^6.24.1",
     "eslint": "^4.12.0",
     "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-css-modules": "^2.7.5",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^2.1.0",
+    "jest": "^22.1.4",
+    "jest-serializer-vue": "^0.3.0",
+    "moxios": "^0.4.0",
+    "nva-server": "^0.3.251",
+    "supertest": "^3.0.0",
+    "tap-spec": "^4.1.1",
+    "vue-jest": "^2.0.0",
     "vue-loader": "^13.5.0",
-    "vue-template-compiler": "^2.5.9"
+    "vue-template-compiler": "^2.5.9",
+    "vue-test-utils": "^1.0.0-beta.11"
   }
 }
