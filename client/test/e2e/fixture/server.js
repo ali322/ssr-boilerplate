@@ -1,8 +1,8 @@
-let app = require('../../../../dist/server/bootstrap')
+let app = require('../../../../server/bootstrap')
 
 let server = require('nva-server')({
-    log: false,
-    mock: '.nva/mock/event'
+  log: false,
+  mock: { path: '.nva/mock/*.js' }
 })
 
 server.use(app.callback())
