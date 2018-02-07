@@ -89,7 +89,7 @@
     "jest": "^22.1.4",
     "jest-serializer-vue": "^0.3.0",
     "moxios": "^0.4.0",
-    "nva-server": "^0.3.251",
+    "nva-server": "^0.4.6",
     "supertest": "^3.0.0",
     "tap-spec": "^4.1.1",
     "vue-jest": "^2.0.0"
