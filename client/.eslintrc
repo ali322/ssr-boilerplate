@@ -3,9 +3,11 @@
   "extends": "standard",
   "plugins": ["css-modules", "vue"],
   "globals": {
-    "__DEV__": true
+    "__DEV__": true,
+    "fixture": true
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true
   }
 }
