@@ -1,6 +1,6 @@
 # SSR Boilerplate
 
-[![Build Status](https://travis-ci.org/ali322/ssr-boilerplate.svg?branch=vue-spa)](https://travis-ci.org/ali322/ssr-boilerplate)
+[![Build Status](https://travis-ci.org/ali322/ssr-boilerplate.svg?branch=spa)](https://travis-ci.org/ali322/ssr-boilerplate)
 [![Dependency Status](https://gemnasium.com/badges/github.com/ali322/ssr-boilerplate.svg)](https://gemnasium.com/github.com/ali322/ssr-boilerplate)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ba09b7efe52888308abc/maintainability)](https://codeclimate.com/github/ali322/ssr-boilerplate/maintainability)
 
