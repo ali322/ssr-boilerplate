@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import { shallow, createLocalVue } from 'vue-test-utils'
+import { shallow, createLocalVue } from '@vue/test-utils'
 import moxios from 'moxios'
 import mutations from '@/index/mutation'
 import * as actions from '@/index/action'

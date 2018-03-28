@@ -91,7 +91,6 @@
     "tap-spec": "^4.1.1",
     "vue-jest": "^2.0.0",
     "vue-loader": "^14.2.2",
-    "vue-template-compiler": "^2.5.9",
-    "vue-test-utils": "^1.0.0-beta.11"
+    "vue-template-compiler": "^2.5.9"
   }
 }
