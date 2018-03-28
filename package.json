@@ -61,7 +61,7 @@
     "lodash": "^4.17.4",
     "lru-cache": "^4.1.1",
     "normalize.css": "^7.0.0",
-    "nva-server": "^0.3.223",
+    "nva-server": "^0.4.8",
     "vue": "^2.5.9",
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.9",
@@ -69,6 +69,7 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.13",
     "ava": "^0.25.0",
     "babel-eslint": "^8.2.1",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -86,11 +87,10 @@
     "jest": "^22.1.4",
     "jest-serializer-vue": "^0.3.0",
     "moxios": "^0.4.0",
-    "nva-server": "^0.4.6",
     "supertest": "^3.0.0",
     "tap-spec": "^4.1.1",
     "vue-jest": "^2.0.0",
-    "vue-loader": "^13.5.0",
+    "vue-loader": "^14.2.2",
     "vue-template-compiler": "^2.5.9",
     "vue-test-utils": "^1.0.0-beta.11"
   }
