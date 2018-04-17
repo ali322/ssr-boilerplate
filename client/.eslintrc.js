@@ -11,11 +11,10 @@ module.exports = {
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: [
-    'plugin:vue/recommended',
-    "plugin:promise/recommended",
     'standard'
   ],
   plugins: [
+    'promise',
     'vue'
   ],
   'rules': {
