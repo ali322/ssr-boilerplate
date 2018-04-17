@@ -33,9 +33,6 @@
                 window.history.back()
             },
             ...mapActions(Object.keys(actions))
-        },
-        mounted() {
-            this.fetchDetail(123)
         }
     }
 </script>
