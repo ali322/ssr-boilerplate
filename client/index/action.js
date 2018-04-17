@@ -12,7 +12,7 @@ export function responseEvents ({ commit }, payload) {
 export function fetchEvents ({ commit, dispatch }) {
   dispatch('requestEvents')
   return axios
-    .get('http://127.0.0.1:3000/mock/events')
+    .get('http://127.0.0.1:7000/mock/events')
     .then(ret => {
       ret = ret.data
       dispatch('responseEvents', ret.data)
