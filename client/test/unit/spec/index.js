@@ -36,7 +36,7 @@ describe('actions', () => {
       { type: constants.RESPONSE_EVENTS, payload: ret.data }
     ]
 
-    moxios.stubRequest('http://127.0.0.1:3000/mock/events', {
+    moxios.stubRequest('http://127.0.0.1:7000/mock/events', {
       status: 200,
       responseText: JSON.stringify(ret)
     })
