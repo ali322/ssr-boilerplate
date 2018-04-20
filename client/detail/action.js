@@ -11,7 +11,7 @@ export function responseDetail ({ commit }, payload) {
 
 export function fetchDetail ({ dispatch, commit }, id) {
   dispatch('requestDetail')
-  return axios.get(`/mock/event/${id}`).then(ret => {
+  return axios.get(`http://127.0.0.1:7000/mock/event/${id}`).then(ret => {
     ret = ret.data
     dispatch('responseDetail', ret.data)
   })

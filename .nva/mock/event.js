@@ -124,12 +124,12 @@ module.exports = [{
   }
 },
 {
-  "url": "/mock/event",
-  "method": "put",
+  "url": "/mock/test",
+  "method": "get",
   "response": {
       "status": "ok",
       "data": {
-          "id": 6
+          "id": 5
       }
   }
 }
