@@ -2,3 +2,4 @@ node_modules
 dist
 .vscode
 client/test/unit/coverage
+package-lock.json
