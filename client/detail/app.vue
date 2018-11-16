@@ -21,10 +21,10 @@ import * as actions from './action'
 
 export default {
   name: 'Detail',
-  // asyncState({ store, route }) {
-  //   // store.registerModule('detail', detailStore)
-  //   return store.dispatch('fetchDetail', route.params.id)
-  // },
+  asyncState({ store, route }) {
+    // store.registerModule('detail', detailStore)
+    return store.dispatch('fetchDetail', route.params.id)
+  },
   computed: {
     ...mapState({
       detail: state => state.detail.detail,
@@ -38,7 +38,7 @@ export default {
     ...mapActions(Object.keys(actions))
   },
   mounted() {
-    this.fetchDetail(this.route.params.id)
+    // this.fetchDetail(this.route.params.id)
   }
 }
 </script>

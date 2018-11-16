@@ -16,7 +16,7 @@ exports.markupOfRoute = (route, initialState, ctx) => {
     ctx.state = { [route]: initialState }
     const renderer = createBundleRenderer(app, {
       template,
-      runInNewContext: 'once',
+      runInNewContext: false,
       cache: lrcCache({
         max: 1000,
         maxAge: 1000 * 60 * 15 // expired after 15 mins
