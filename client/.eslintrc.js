@@ -10,7 +10,8 @@ module.exports = {
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: [
-    'standard'
+    'standard',
+    "plugin:react/recommended"
   ],
   plugins: [
     'promise'
@@ -20,7 +21,8 @@ module.exports = {
     'generator-star-spacing': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'space-before-function-paren': 'off',
-		'new-cap': 'off',
+    'new-cap': 'off',
+    "react/jsx-uses-react": "error",
     'space-before-function-paren': 'off',
     'promise/always-return': 'off',
     'promise/no-return-wrap': 'off',
