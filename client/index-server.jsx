@@ -33,7 +33,7 @@ export default (ctx, initialState) => {
       index: initialState
     })
     Promise.all(matched.map(route => {
-      return route.asyncState(store)
+      return route.asyncState && route.asyncState(store)
     }))
       .then(() => {
         let app = <Server context={context} location={ctx.url} store={store} />
