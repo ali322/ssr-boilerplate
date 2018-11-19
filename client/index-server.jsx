@@ -5,7 +5,6 @@ import { wrapper, configureStore } from 'redux-container'
 import { matchPath } from 'react-router-dom'
 import rootReducer from './reducer'
 import routes from './routes'
-import * as actions from './index/action'
 
 const Server = props => {
   const { location, context, store } = props
@@ -33,8 +32,9 @@ export default (ctx, initialState) => {
     const store = configureStore(rootReducer, {
       index: initialState
     })
-    store
-      .dispatch(actions.fetchEvents())
+    Promise.all(matched.map(route => {
+      return route.asyncState(store)
+    }))
       .then(() => {
         let app = <Server context={context} location={ctx.url} store={store} />
         let state = store.getState()
